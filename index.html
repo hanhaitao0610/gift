@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>HTML5手机端开宝箱抽奖代码 - 站长素材</title>
+<title>开宝箱抽奖</title>
 <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
 
 <script src="js/zepto.js"></script>
@@ -21,7 +21,7 @@
 	.ca-msg .ca-title span{display: inline-block;width: 50%;text-align: center;color: #B36206;float: left;border-radius: .1rem;}
 	.cactive{background:  #F1CF47;border-radius: .2rem;}
 	.ca-infor{padding: .2rem;height: 1.4rem;font-size: .25rem;}
-	.caseopen{animation: mymove 300ms linear 3;}
+	.caseopen1{animation: mymove 300ms linear 3;}
 	@keyframes mymove{
 		from{transform: rotate(-15deg) scale(1.04);}
 		to{transform: rotate(15deg) scale(0.97);}
@@ -38,6 +38,11 @@
 	.ca-prmsg img{width: 80%;margin:0 10%;}
 	.ca-prmsg .eg-goods{position: absolute;width: 15%;height: 1rem;margin: 0;top: 4.2rem;margin: 0 42.5%;}
 	.ca-prmsg p{position: absolute;top: 5.2rem;width: 30%;text-align: center;margin: 0 35%;font-size: .2rem;}
+
+	.ca-prmsg-not{width:100%;height:100%;background-color: rgba(0,0,0,0.7);position:fixed;top:0;left:0;z-index: 9;display: none;}
+	.ca-prmsg-not img{width: 80%;margin:0 10%;}
+	.ca-prmsg-not .eg-goods{position: absolute;width: 15%;height: 1rem;margin: 0;top: 4.2rem;margin: 0 42.5%;}
+	.ca-prmsg-not p{position: absolute;top: 5.2rem;width: 30%;text-align: center;margin: 0 35%;font-size: .2rem;}
 </style>
 
 </head>
@@ -47,37 +52,41 @@
 	<main>
 		<div class="casebg">
 		<div class="ca-prmsg" style="display: none;">
+			   <img src="img/game/test1.jpg" alt="中奖信息">
+			   <!-- <p>婷婷老师电话联系一次*1</p> -->
+		</div>
+		<div class="ca-prmsg-not" style="display: none;">
 			   <img src="img/game/camsg.png" alt="中奖信息">
 			   <img src="img/prize/suipian.png" class="eg-goods">
-			   <p>精元碎片*1</p>
+			   <p>没有中奖哦</p>
 		</div>
 		<div class="ca-content">
 			<dl>
-				<dt><img src="img/game/caclose.png" alt="宝箱"></dt>
-				<dt><img src="img/game/caclose.png" alt="宝箱"></dt>
-				<dt><img src="img/game/caclose.png" alt="宝箱"></dt>
+				<dt><img id="id1" name="nottarget" src="img/game/caclose.png" alt="宝箱"></dt>
+				<dt><img id="id2" name="nottarget" src="img/game/caclose.png" alt="宝箱"></dt>
+				<dt><img id="id3" src="img/game/caclose.png" alt="宝箱"></dt>
 			</dl>
 			<dl>
-				<dt><img src="img/game/caclose.png" alt="宝箱"></dt>
-				<dt><img src="img/game/caclose.png" alt="宝箱"></dt>
-				<dt><img src="img/game/caclose.png" alt="宝箱"></dt>
+				<dt><img id="id4" name="target"  src="img/game/caclose.png" alt="宝箱"></dt>
+				<dt><img id="id5" name="nottarget" src="img/game/caclose.png" alt="宝箱"></dt>
+				<dt><img id="id6" name="nottarget" src="img/game/caclose.png" alt="宝箱"></dt>
 			</dl>
 			<dl>
-				<dt><img src="img/game/caclose.png" alt="宝箱"></dt>
-				<dt><img src="img/game/caclose.png" alt="宝箱"></dt>
-				<dt><img src="img/game/caclose.png" alt="宝箱"></dt>
+				<dt><img id="id7" name="nottarget" src="img/game/caclose.png" alt="宝箱"></dt>
+				<dt><img id="id8" name="nottarget" src="img/game/caclose.png" alt="宝箱"></dt>
+				<dt><img id="id9" name="nottarget" src="img/game/caclose.png" alt="宝箱"></dt>
 			</dl>
 			
 		</div>
 		<div class="ca-msg">
 			<div class="ca-title">
-				<span class="ca-menu">中奖名单</span>
-				<span class="ca-prizes">我的奖品</span>
+				<span class="ca-menu">游戏说明</span>
 			</div>
 			<div class="ca-infor">
 				<dl>
-					<dd>恭喜大王获得10金币</dd>
-					<dd>恭喜四太太获得20金</dd>
+					<dd>· 此游戏仅限于婷婷老师班级所有</dd>
+					<dd>· 每次只有一个宝箱可以中奖</dd>
+					<!-- <dd>· 私信联系婷婷老师领取</dd> -->
 				</dl>
 			</div>
 		</div>

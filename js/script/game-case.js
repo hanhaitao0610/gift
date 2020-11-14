@@ -28,8 +28,8 @@ pageview.bind = function() {
 				$('.ca-title span').removeClass('cactive');
 				$(this).addClass('cactive');})
 		//开箱动画弹窗
-			$('.ca-content dl dt img').click(function(){
-				$(this).addClass('caseopen');
+			$("img[name='target']").click(function(){
+				$(this).addClass('caseopen1');
 				var that=this;
 				that.addEventListener("webkitAnimationEnd", function() {
 				       // this.className = "";
@@ -40,8 +40,27 @@ pageview.bind = function() {
 						     $('.ca-prmsg').fadeOut(500);
 						    });
 					   },300);
-					  $('.ca-content dl dt img').removeClass('caseopen');
+					  $('.ca-content dl dt img').removeClass('caseopen1');
 				    })
 				 $(".ca-content dl dt img").attr({ src: "img/game/caclose.png", alt: "蛋壳" });
 				})
+
+			$("img[name='nottarget']").click(function(){
+				$(this).addClass('caseopen1');
+				var that=this;
+				that.addEventListener("webkitAnimationEnd", function() {
+				       // this.className = "";
+					   setTimeout(function(){
+						   $(that).attr({ src: "img/game/caopen.png", alt: "宝箱" });
+						  $('.ca-prmsg-not').fadeIn(500);
+						   $(".ca-prmsg-not").click(function(){
+						     $('.ca-prmsg-not').fadeOut(500);
+						    });
+					   },300);
+					  $('.ca-content dl dt img').removeClass('caseopen1');
+				    })
+				 $(".ca-content dl dt img").attr({ src: "img/game/caclose.png", alt: "蛋壳" });
+				})
+
+
 			})
