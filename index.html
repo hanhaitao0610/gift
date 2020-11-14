@@ -1,0 +1,92 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>HTML5手机端开宝箱抽奖代码 - 站长素材</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+
+<script src="js/zepto.js"></script>
+<script src="js/bui.js"></script>
+<script src="js/main.js"></script>
+
+<link rel="stylesheet" href="css/css.css">
+<style type="text/css">
+	.casebg{background: url(img/game/cabg.jpg) no-repeat;background-size: 100%;position: absolute;height:100%;}
+	.ca-content{width: 90%;margin:4rem 5% 0;height: 7rem;padding: .2rem .2rem;}
+	.ca-content dl{float:left;width: 100%;margin:0.35rem 0rem;}
+	.ca-content dt{float: left;margin: 0;width: calc(100%/3);text-align: center;height: 1.5rem;}
+	.ca-content dt img{width: 90%;}
+	.ca-msg{background: #FFF6C1;margin: 0 auto 0;border-radius: .2rem;border: #EECA38 solid 4px;width: 7rem;}
+	.ca-msg .ca-title{height: .6rem;line-height: .6rem;border-radius: .1rem;background: #FFF6C1;}
+	.ca-msg .ca-title span{display: inline-block;width: 50%;text-align: center;color: #B36206;float: left;border-radius: .1rem;}
+	.cactive{background:  #F1CF47;border-radius: .2rem;}
+	.ca-infor{padding: .2rem;height: 1.4rem;font-size: .25rem;}
+	.caseopen{animation: mymove 300ms linear 3;}
+	@keyframes mymove{
+		from{transform: rotate(-15deg) scale(1.04);}
+		to{transform: rotate(15deg) scale(0.97);}
+	}
+	@-webkit-keyframes mymove{
+	from{transform: rotate(-15deg) scale(1.04);}
+	to{transform: rotate(15deg) scale(0.97);}
+	}
+	@-moz-keyframes mymove{
+		from{transform: rotate(-15deg) scale(1.04);}
+		to{transform: rotate(15deg) scale(0.97);}
+	}
+	.ca-prmsg{width:100%;height:100%;background-color: rgba(0,0,0,0.7);position:fixed;top:0;left:0;z-index: 9;display: none;}
+	.ca-prmsg img{width: 80%;margin:0 10%;}
+	.ca-prmsg .eg-goods{position: absolute;width: 15%;height: 1rem;margin: 0;top: 4.2rem;margin: 0 42.5%;}
+	.ca-prmsg p{position: absolute;top: 5.2rem;width: 30%;text-align: center;margin: 0 35%;font-size: .2rem;}
+</style>
+
+</head>
+<body>
+
+<div class="bui-page">
+	<main>
+		<div class="casebg">
+		<div class="ca-prmsg" style="display: none;">
+			   <img src="img/game/camsg.png" alt="中奖信息">
+			   <img src="img/prize/suipian.png" class="eg-goods">
+			   <p>精元碎片*1</p>
+		</div>
+		<div class="ca-content">
+			<dl>
+				<dt><img src="img/game/caclose.png" alt="宝箱"></dt>
+				<dt><img src="img/game/caclose.png" alt="宝箱"></dt>
+				<dt><img src="img/game/caclose.png" alt="宝箱"></dt>
+			</dl>
+			<dl>
+				<dt><img src="img/game/caclose.png" alt="宝箱"></dt>
+				<dt><img src="img/game/caclose.png" alt="宝箱"></dt>
+				<dt><img src="img/game/caclose.png" alt="宝箱"></dt>
+			</dl>
+			<dl>
+				<dt><img src="img/game/caclose.png" alt="宝箱"></dt>
+				<dt><img src="img/game/caclose.png" alt="宝箱"></dt>
+				<dt><img src="img/game/caclose.png" alt="宝箱"></dt>
+			</dl>
+			
+		</div>
+		<div class="ca-msg">
+			<div class="ca-title">
+				<span class="ca-menu">中奖名单</span>
+				<span class="ca-prizes">我的奖品</span>
+			</div>
+			<div class="ca-infor">
+				<dl>
+					<dd>恭喜大王获得10金币</dd>
+					<dd>恭喜四太太获得20金</dd>
+				</dl>
+			</div>
+		</div>
+		</div>
+	</main>
+</div>
+
+<script src="js/script/game-case.js"></script>
+
+</body>
+</html>
+
