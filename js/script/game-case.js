@@ -32,7 +32,7 @@ function getQueryString(name) {
 //中奖名单样式控制
 		$(function(){
 			var index=Math.floor(Math.random()*10);
-			if(index===10){
+			if(index===10 || index===9){
 				index=5;
 			}
 
